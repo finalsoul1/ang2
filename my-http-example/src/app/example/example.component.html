@@ -1,0 +1,32 @@
+<!-- <ul>
+  <div class="" *ngFor='let t of todos'>
+    <li>{{t.userId}} {{t.id}} {{t.title}} {{t.completed}}</li>
+  </div>
+</ul> -->
+
+<button type="button" class="btn" (click)="onClick()"></button>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>userId</th>
+      <th>id</th>
+      <th>title</th>
+      <th>completed</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <ng-template ngFor let-t [ngForOf]="todos">
+      <tr>
+        <th>{{t.userId}}</th>
+        <th>{{t.id}}</th>
+        <th>{{t.title}}</th>
+        <th>{{t.completed}}</th>
+      </tr>
+    </ng-template>
+  </tbody>
+
+</table>

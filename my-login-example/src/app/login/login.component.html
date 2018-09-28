@@ -1,0 +1,22 @@
+<p>
+  login works!
+</p>
+<div class="">
+  <!-- 빈문자열일땐 아무것도 출력안함 -->
+  <h3>{{errorMessage}}</h3>
+</div>
+<div class="">
+  <form class="" (ngSubmit)="f.form.valid && login()" #f="ngForm" name="form">
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th><input type="text" [(ngModel)]="user.id" name="id" #id="ngModel" required></th>
+          <th>pw</th>
+          <th><input type="text" [(ngModel)]="user.pw" name="pw" #pw="ngModel" required></th>
+          <th><button type="submit">Login</button></th>
+        </tr>
+      </thead>
+    </table>
+  </form>
+</div>
